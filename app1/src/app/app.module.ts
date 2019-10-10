@@ -6,20 +6,30 @@ import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
 import { PainelComponent } from './painel/painel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { Routes, RouterModule } from '@angular/router';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
+const routes: Routes = [
+  {path: 'login', component: LoginComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     TopoComponent,
-    PainelComponent
+    PainelComponent,
+    CadastroComponent
+    
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

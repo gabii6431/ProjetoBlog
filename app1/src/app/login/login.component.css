@@ -1,0 +1,27 @@
+.example-card{
+    color:  #ff3860;
+    max-width: 400px;
+    padding-top: 50px;
+    padding-left: 50px;
+    margin-top: 180px;
+    margin-left: 450px;
+}
+
+.input{
+    padding-left: 80px;
+}
+.botton-login{
+    margin-left: 130px;
+}
+h1{
+    padding-left: 50px;
+}
+
+/* colour changes to the bulma framework */
+a {
+    color: #ff3860;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 50px;
+    font-size: 10pt;
+}
