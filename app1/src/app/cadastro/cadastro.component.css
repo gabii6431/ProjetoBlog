@@ -1,20 +1,29 @@
 .example-card{
     color:  #ff3860;
-    height: 300px;
-    max-width: 400px;
-    padding-top: 50px;
-    padding-left: 50px;
-    margin-top: 150px;
-    margin-left: 450px;
+    height: 350px;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.example-container > * {
+    width: 100%;
 }
 
 .dados{
-    margin-left:50px;
-    width: 300px;
+    float:left;
 }
 .botton-login{
-    margin-left: 150px;
+    margin-left: 120px;
 }
 h1{
-    padding-left: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
