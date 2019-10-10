@@ -1,0 +1,20 @@
+.example-card{
+    color:  #ff3860;
+    height: 300px;
+    max-width: 400px;
+    padding-top: 50px;
+    padding-left: 50px;
+    margin-top: 150px;
+    margin-left: 450px;
+}
+
+.dados{
+    margin-left:50px;
+    width: 300px;
+}
+.botton-login{
+    margin-left: 150px;
+}
+h1{
+    padding-left: 50px;
+}
