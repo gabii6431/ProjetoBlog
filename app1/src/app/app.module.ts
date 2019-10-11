@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopoComponent } from './topo/topo.component';
 import { PainelComponent } from './painel/painel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { Routes, RouterModule } from '@angular/router';
@@ -17,18 +16,21 @@ import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatTabsModule} from '@angular/material/tabs';
+import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
+  {path: 'painel', component: PainelComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TopoComponent,
     PainelComponent,
-    CadastroComponent
+    CadastroComponent,
+    HomeComponent
     
   ],
   imports: [
@@ -42,7 +44,8 @@ const routes: Routes = [
     MatToolbarModule,
     MatFormFieldModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
