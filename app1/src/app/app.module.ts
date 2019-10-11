@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,

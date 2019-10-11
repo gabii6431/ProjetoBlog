@@ -1,17 +1,41 @@
 <mat-card class="example-card">
-    <form class="example-container">
+    <form class="example-container" novalidate>
         <h1>Register</h1>
         <mat-form-field class="dados">
-            <input matInput placeholder="Full name">
+            <input 
+            matInput 
+            placeholder="Full name"
+            [value] = "fullname"
+            #inputFullname
+            (input) = "atualizaFullname(inputFullname.value)"
+            required
+            >
         </mat-form-field>
         <mat-form-field class="dados">
-            <input matInput placeholder="Username">
+            <input 
+            matInput 
+            placeholder="Username"
+            [value] = "username"
+            #inputUsername
+            (input) = "atualizaUsername(inputUsername.value)"
+            required
+            >
         </mat-form-field>
         <mat-form-field class="dados">
-            <input matInput placeholder="Email">
+            <input 
+            matInput 
+            placeholder="Email"
+            [value] = "email"
+            #inputEmail
+            (input) = "atualizaEmail(inputEmail.value)"
+            required>
         </mat-form-field>
         <mat-card-actions class="botton-login">
-            <button mat-button type="submit">Register</button>
+            <button 
+            mat-button 
+            type="button" 
+            (click) = "confirmarCadastro()"
+            >Register</button>
         </mat-card-actions>
     </form>
 </mat-card>
