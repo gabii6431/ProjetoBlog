@@ -1,10 +1,28 @@
-.example-card {
-    max-width: 400px;
+
+.title-blog{
+    color:  #ff3860;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
-  
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+
+.subtitle-blog{
+    color:  #ff3860;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.menu-blog{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) */
 }
 
   
