@@ -3,9 +3,21 @@
     <h4 class="subtitle-blog">a blog about technology</h4>
 
     <mat-tab-group class="menu-blog">
-        <mat-tab label="Home"></mat-tab>
-        <mat-tab label="About"></mat-tab>
-        <mat-tab label="Contact"></mat-tab>
+        <mat-tab label="Home">
+            <div class="formato-posts">
+                <app-home></app-home>
+            </div>  
+        </mat-tab>
+        <mat-tab label="About">
+            <div class="formato-posts">
+                <app-about></app-about>
+            </div>
+        </mat-tab>
+        <mat-tab label="Contact">
+            <div>
+                <app-contact></app-contact>
+            </div>
+        </mat-tab>
     </mat-tab-group>
 
 </div>
