@@ -20,6 +20,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import {ApiService} from './service/api.service';
+
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
   {path: 'painel', component: PainelComponent}
@@ -31,7 +33,6 @@ const routes: Routes = [
     PainelComponent,
     CadastroComponent,
     HomeComponent
-    
   ],
   imports: [
     RouterModule.forRoot(ROUTES),
@@ -47,7 +48,9 @@ const routes: Routes = [
     MatInputModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
