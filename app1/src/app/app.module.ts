@@ -19,6 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 import {ApiService} from './service/api.service';
 
@@ -33,6 +35,10 @@ const routes: Routes = [
     PainelComponent,
     CadastroComponent,
     HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
+    
   ],
   imports: [
     RouterModule.forRoot(ROUTES),

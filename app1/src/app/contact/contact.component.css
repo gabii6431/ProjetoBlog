@@ -1,0 +1,17 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 8%;
+    
+}
+  
+.example-container > * {
+    width: 100%;
+}
+
+.mat-button{
+    color:  #ff3860;
+}
+  

@@ -25,4 +25,14 @@
     transform: translate(-50%, -50%) */
 }
 
+.formato-posts{
+    padding-top: 8%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 8%;
+}
+
+.mat-tab {
+    color:  #ff3860 !important;
+}
   
