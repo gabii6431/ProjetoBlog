@@ -3,6 +3,12 @@ const express = require('express'),
   bodyParser = require('body-parser');
   port = process.env.PORT || 3001;
 
+var cors = require('cors');
+
+// var corsOptions = {
+//   origin: 'http://localhost/4200'
+// }
+app.use(cors());
 
 const mysql = require('mysql');
 // connection configurations

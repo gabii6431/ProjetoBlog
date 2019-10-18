@@ -11,7 +11,7 @@ import { Cadastro } from '../shared/cadastro.model'
 export class CadastroComponent implements OnInit {
 
   //Cadastro
-  public cadastro: Cadastro = new Cadastro('','','')
+  public cadastro: Cadastro = new Cadastro()
 
   public fullname: string = ''
   public username: string = ''

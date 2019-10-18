@@ -1,7 +1,6 @@
 export class Cadastro{
-    constructor(
-        public fullname: string,
-        public username: string,
-        public email: string
-    ){}
+        _id: number;
+        fullname: string;
+        username: string;
+        email: string;
 }

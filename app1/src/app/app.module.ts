@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+import {ApiService} from './service/api.service';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
     LoginComponent,
     PainelComponent,
     CadastroComponent,
+    HomeComponent
     HomeComponent,
     AboutComponent,
     ContactComponent
@@ -52,7 +54,9 @@ const routes: Routes = [
     MatInputModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

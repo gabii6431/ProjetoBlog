@@ -7,19 +7,19 @@ import { Cadastro } from '../shared/cadastro.model';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = 'http://localhost:4200/cadastro';
+
+const apiUrl = 'http://localhost:3001/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  
 
   constructor(private http: HttpClient) { }
 
   // getUsers (): Observable<Cadastro[]> {
-  //   return this.http.get<Cadastro[]>(apiUrl)
-  //     .pipe(
-  //       tap(users => console.log('leu os users')),
+  //   return this.http.get<Cadastro[]>(apiUrl).pipe(tap(users => console.log('leu os users')),
   //       catchError(this.handleError('getUsers', []))
   //     );
   // }
@@ -34,12 +34,21 @@ export class ApiService {
 
   addUser (cadastro): Observable<Cadastro> {
     console.log(cadastro)
-    return this.http.post<Cadastro>(apiUrl, JSON.stringify(cadastro), httpOptions).pipe(
+    return this.http.post<Cadastro>(apiUrl, cadastro, httpOptions).pipe(
       // tslint:disable-next-line:no-shadowed-variable
       tap((cadastro: Cadastro) => console.log(`adicionou o user com w/ name=${cadastro.fullname}`)),
       catchError(this.handleError<Cadastro>('addUser'))
     );
   }
+
+  // addUser (cadastro): Observable<Cadastro> {
+  //   console.log(cadastro)
+  //   return this.http.post(`${this.apiUrl}/user`, JSON.stringify(cadastro), httpOptions).pipe(
+  //     // tslint:disable-next-line:no-shadowed-variable
+  //     tap((cadastro: Cadastro) => console.log(`adicionou o user com w/ name=${cadastro.fullname}`)),
+  //     catchError(this.handleError<Cadastro>('addUser'))
+  //   );
+  // }
 
   // updateUser(id, cadastro): Observable<any> {
   //   const url = `${apiUrl}/${id}`;
