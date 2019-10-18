@@ -19,10 +19,8 @@
 
 .menu-blog{
     position: absolute;
-    top: 30%;
+    top: 32%;
     left: 35%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) */
 }
 
 .formato-posts{
@@ -32,7 +30,18 @@
     padding-bottom: 8%;
 }
 
-.mat-tab {
-    color:  #ff3860 !important;
+.new-post{
+    position: absolute;
+    top: 26%;
+    left: 50%;
 }
+
+.search{
+    position: absolute;
+    width: 13%;
+    border: solid black 1px;
+    top: 27%;
+    left: 30%;
+}
+
   
