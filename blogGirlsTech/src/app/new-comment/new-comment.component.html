@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-card class="item-card">
+      <form [formGroup]="userForm" (ngSubmit)="addComment(userForm.value)">
+        <mat-card-header>
+          <mat-form-field class="title">
+            <input matInput name="title" placeholder="Title" formControlName="title">
+          </mat-form-field>
+          <mat-form-field class="body">
+            <input matInput name="body" placeholder="Comment" formControlName="body">
+          </mat-form-field>
+          <mat-form-field class="email">
+            <input matInput name="email" placeholder="Email" formControlName="email">
+          </mat-form-field>
+        </mat-card-header>
+        <mat-card-actions>
+          <button class="btnSend" type="submit" [disabled]="!userForm.valid" mat-raised-button
+          color="primary">Adicionar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+</div>

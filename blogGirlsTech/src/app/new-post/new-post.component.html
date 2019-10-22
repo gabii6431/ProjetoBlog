@@ -1,0 +1,28 @@
+<div class="container">
+    <mat-card class="item-card">
+      <form [formGroup]="postForm" (ngSubmit)="addPost(postForm.value)">
+        <mat-card-header>
+          <mat-form-field class="title">
+            <input matInput name="title" placeholder="Título do Post" formControlName="title">
+          </mat-form-field>
+          <mat-form-field class="users">
+            <mat-select placeholder="Usuário" name="user_id" formControlName="user_id">
+              <mat-option *ngFor="let user of dataSource" [value]="user.id">
+                {{user.username}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field class="body">
+            <textarea cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"
+              matInput name="body" placeholder="Conteúdo do Post" formControlName="body"></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="btnSend" type="submit" [disabled]="!postForm.valid" mat-raised-button
+            color="primary">Adicionar</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>

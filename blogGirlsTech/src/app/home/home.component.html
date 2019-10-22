@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-grid-list cols="1" rowHeight="1:1">
+        <mat-card class="item-card" *ngFor="let post of dataSource">
+            <mat-card-header>
+              <mat-card-title>{{post.title}}</mat-card-title>
+              <mat-card-subtitle> {{post.username}} em {{post.data | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://picsum.photos/750/600?random={{dataSource.indexOf(post)}}" width="50px" height="300px">
+            <mat-card-content>
+              <p>
+                {{post.body}}
+              </p>
+            </mat-card-content>
+            
+            <mat-card-actions class="button">
+              <button mat-raised-button color="primary" [routerLink]="['/comment', post.id]">Comments</button>
+              <div class="button-end">
+                <button (click)="edit()" color="accent" mat-icon-button> 
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button color="warn" mat-icon-button>
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+  </mat-grid-list>
+    
+  </div>

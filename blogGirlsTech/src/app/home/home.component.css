@@ -1,0 +1,39 @@
+.container {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item-card {
+    max-width: 500px;
+    margin: 15px;
+  }
+  
+  mat-card-content {
+    max-height: 100px;
+    overflow: hidden;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px !important;
+  }
+  
+  .button-end {
+    position: absolute;
+    right: 5%;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

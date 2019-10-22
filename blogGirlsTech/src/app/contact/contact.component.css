@@ -1,0 +1,16 @@
+.example-container {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.mat-button{
+    color:  #ff3860;
+}
+
+mat-form-field {
+    padding: 50px;
+}
+
+mat-card-actions{
+    margin-left: 50px;
+}
