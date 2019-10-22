@@ -5,10 +5,10 @@ const express = require('express'),
 
 var cors = require('cors');
 
-// var corsOptions = {
-//   origin: 'http://localhost/4200'
-// }
-app.use(cors());
+var corsOptions = {
+  origin: 'http://localhost:4200',
+  optionsSuccessStatus: 200
+}
 
 const mysql = require('mysql');
 // connection configurations
@@ -28,6 +28,7 @@ console.log('API server started on: ' + port);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors(corsOptions));
 
 var routes = require('./routes/approutes'); //importing route
 routes(app); //register the route

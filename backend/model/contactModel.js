@@ -2,13 +2,13 @@
 var sql = require('./db.js');
 
 //Post object constructor
-var Post = function(post){
-    this.title = post.title;
-    this.body = post.body;
-    this.user_id = post.user_id;
+var Contact = function(contact){
+    this.nome = contact.nome;
+    this.email = contact.email;
+    this.message = contact.message;
 };
-Post.createPost = function (newPost, result) {
-        sql.query("INSERT INTO post set ?", newPost, function (err, res) {
+Contact.createContact = function (newContact, result) {   
+        sql.query("INSERT INTO contact set ?", newContact, function (err, res) {
                 
                 if(err) {
                     console.log("error: ", err);
@@ -20,8 +20,8 @@ Post.createPost = function (newPost, result) {
                 }
             });           
 };
-Post.getPostById = function (postId, result) {
-        sql.query("Select title, body from post where id = ? ", postId, function (err, res) {             
+Contact.getContactById = function (contactId, result) {
+        sql.query("Select nome, email, message from contact where id = ? ", contactId, function (err, res) {             
                 if(err) {
                     console.log("error: ", err);
                     result(err, null);
@@ -32,22 +32,22 @@ Post.getPostById = function (postId, result) {
                 }
             });   
 };
-Post.getAllPost = function (result) {
-        sql.query("Select * from post", function (err, res) {
+Contact.getAllContact = function (result) {
+        sql.query("Select * from contact", function (err, res) {
 
                 if(err) {
                     console.log("error: ", err);
                     result(null, err);
                 }
                 else{
-                  console.log('post : ', res);  
+                  console.log('contact : ', res);  
 
                  result(null, res);
                 }
             });   
 };
-Post.updateById = function(id, post, result){
-  sql.query("UPDATE post SET body = ? WHERE id = ?", [post.body, id], function (err, res) {
+Contact.updateById = function(id, post, result){
+  sql.query("UPDATE contact SET message = ? WHERE id = ?", [post.message, id], function (err, res) {
           if(err) {
               console.log("error: ", err);
                 result(null, err);
@@ -57,8 +57,8 @@ Post.updateById = function(id, post, result){
                 }
             }); 
 };
-Post.remove = function(id, result){
-     sql.query("DELETE FROM post WHERE id = ?", [id], function (err, res) {
+Contact.remove = function(id, result){
+     sql.query("DELETE FROM contact WHERE id = ?", [id], function (err, res) {
 
                 if(err) {
                     console.log("error: ", err);
@@ -71,4 +71,4 @@ Post.remove = function(id, result){
             }); 
 };
 
-module.exports= Post;
+module.exports= Contact;

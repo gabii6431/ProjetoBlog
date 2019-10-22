@@ -3,6 +3,7 @@ module.exports = function(app) {
   var post = require('../controller/appController');
   var comment = require('../controller/commentController');
   var user = require('../controller/userController');
+  var contact = require('../controller/contactController');
 
   // Post Routes
   app.route('/post').get(post.list_all_post).post(post.create_a_post);
@@ -18,5 +19,11 @@ module.exports = function(app) {
   app.route('/user').get(user.list_all_user).post(user.create_a_user);
     
   app.route('/user/:userId').get(user.read_a_user).put(user.update_a_user).delete(user.delete_a_user);
+
+  // Contact Routes
+  app.route('/contact').get(contact.list_all_contact).post(contact.create_a_contact);
+    
+  app.route('/contact/:contactId').get(contact.read_a_contact).put(contact.update_a_contact).delete(contact.delete_a_contact);
+
 
 };
