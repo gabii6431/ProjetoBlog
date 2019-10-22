@@ -34,7 +34,6 @@ const routes: Routes = [
     LoginComponent,
     PainelComponent,
     CadastroComponent,
-    HomeComponent
     HomeComponent,
     AboutComponent,
     ContactComponent

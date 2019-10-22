@@ -1,25 +1,29 @@
-<div>
-    <h1 class="title-blog">BLOG GIRLS TECH</h1>
-    <h4 class="subtitle-blog">a blog about technology</h4>
 
-    <mat-tab-group class="menu-blog">
-        <mat-tab label="Home">
-            <div class="formato-posts">
-                <app-home></app-home>
-            </div>  
-        </mat-tab>
-        <mat-tab label="About">
-            <div class="formato-posts">
-                <app-about></app-about>
-            </div>
-        </mat-tab>
-        <mat-tab label="Contact">
-            <div>
-                <app-contact></app-contact>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
+<h1 class="title-blog">BLOG GIRLS TECH</h1>
+<h4 class="subtitle-blog">a blog about technology</h4>
 
-</div>
+
+<input matInput placeholder="Search" class="search">
+<button mat-button type="submit" class="new-post">New Post +</button>   
+
+
+<mat-tab-group class="menu-blog">
+    <mat-tab label="Home">
+        <div class="formato-posts">
+            <app-home></app-home>
+        </div>  
+    </mat-tab>
+    <mat-tab label="About">
+        <div class="formato-posts">
+            <app-about></app-about>
+        </div>
+    </mat-tab>
+    <mat-tab label="Contact">
+        <div>
+            <app-contact></app-contact>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+
 
 
