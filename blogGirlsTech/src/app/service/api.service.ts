@@ -62,6 +62,13 @@ export class ApiService {
       .pipe(catchError(this.handleError<Contact>('addContact')));
   }
 
+  deletePost (post): Observable<Post> {
+    return this.http.delete<Post>(`http://localhost:3001/post/${post}`, httpOptions).pipe(
+      tap(_ => console.log(`remove o post com post=${post}`)),
+      catchError(this.handleError<Post>('deleteProduto'))
+    );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

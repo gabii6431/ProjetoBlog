@@ -58,6 +58,7 @@ Post.updateById = function(id, post, result){
             }); 
 };
 Post.remove = function(id, result){
+    console.log('chegou aqui')
      sql.query("DELETE FROM post WHERE id = ?", [id], function (err, res) {
 
                 if(err) {
