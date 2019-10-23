@@ -4,6 +4,7 @@ import { Post } from 'src/model/post';
 import { AppService } from '../service/app.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,7 +19,9 @@ export class HomeComponent implements OnInit {
   constructor(
     private _api: ApiService,
     private router: Router,
-    private appService: AppService) { }
+    private appService: AppService,
+    private route: ActivatedRoute
+    ) { }
     
 
   ngOnInit() {
@@ -43,5 +46,6 @@ export class HomeComponent implements OnInit {
       this.isLoadingResults = false;
     });
   }
+
 }
 

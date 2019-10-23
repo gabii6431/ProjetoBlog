@@ -37,3 +37,6 @@
   .example-full-width {
     width: 100%;
   }
+  .mat-flat-button {
+    margin-left: 5px;
+  }

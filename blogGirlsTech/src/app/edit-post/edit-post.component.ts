@@ -5,7 +5,7 @@ import { Post } from 'src/model/post';
 import { ApiService } from '../service/api.service';
 import { AppService } from '../service/app.service';
 import {ActivatedRoute} from '@angular/router'
-import { readSync } from 'fs';
+// import { readSync } from 'fs';
 
 @Component({
   selector: 'app-edit-post',

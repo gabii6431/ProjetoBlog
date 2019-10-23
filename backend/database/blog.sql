@@ -38,7 +38,7 @@ CREATE TABLE `comment` (
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `comment_fk_post` (`post_id`),
-  CONSTRAINT `comment_fk_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`)
+  CONSTRAINT `comment_fk_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`) ON DELETE CASCADE 
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

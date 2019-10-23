@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
   <mat-grid-list cols="1" rowHeight="1:1">
         <mat-card class="item-card" *ngFor="let post of dataSource">
@@ -15,10 +16,10 @@
             <mat-card-actions class="button">
               <button mat-raised-button color="primary" [routerLink]="['/comment', post.id]">Comments</button>
               <div class="button-end">
-                <button color="accent" mat-icon-button [routerLink] = "['/edit-post', post.id]"> 
+                <button mat-flat-button color="accent" mat-icon-button [routerLink] = "['/edit-post', post.id]"> 
                   <mat-icon>edit</mat-icon>
                 </button>
-                <button (click)="deletePosts(post.id)" color="warn" mat-icon-button>
+                <button mat-flat-button color="warn" (click)="deletePosts(post.id)" color="warn" mat-icon-button>
                   <mat-icon>delete</mat-icon>
                 </button>
               </div>

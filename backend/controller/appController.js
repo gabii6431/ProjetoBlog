@@ -49,7 +49,7 @@ exports.update_a_post = function(req, res) {
 
 
 exports.delete_a_post = function(req, res) {
-
+  console.log("Chegou no exports appController")
   Post.remove( req.params.postId, function(err, post) {
     if (err)
       res.send(err);
