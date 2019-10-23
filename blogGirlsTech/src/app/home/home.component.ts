@@ -40,12 +40,11 @@ export class HomeComponent implements OnInit {
     this.appService.setTitle('Delete Post');
     this._api.deletePost(post).subscribe(res => {
       this.isLoadingResults = false;
-      //this.router.navigate(['/home']);
+      location.reload();
     }, err => {
       console.log(err);
       this.isLoadingResults = false;
     });
   }
-
 }
 
