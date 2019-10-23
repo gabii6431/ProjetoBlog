@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { CommentComponent } from './comment/comment.component';
 import {NewCommentComponent} from './new-comment/new-comment.component'
+import {EditPostComponent} from './edit-post/edit-post.component'
 
 
 const routes: Routes = [
@@ -44,6 +45,11 @@ const routes: Routes = [
     path: 'new-comment/:id',
     component: NewCommentComponent,
     data: { title: 'Comment' }
+  },
+  {
+    path: 'edit-post/:id',
+    component: EditPostComponent,
+    data: { title: 'Edit Post' }
   },
   {
     path: '',

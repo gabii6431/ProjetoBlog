@@ -26,7 +26,8 @@ import {
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { NewCommentComponent } from './new-comment/new-comment.component'
+import { NewCommentComponent } from './new-comment/new-comment.component';
+import { EditPostComponent } from './edit-post/edit-post.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NewCommentComponent } from './new-comment/new-comment.component'
     NewPostComponent,
     HomeComponent,
     MenuComponent,
-    NewCommentComponent
+    NewCommentComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

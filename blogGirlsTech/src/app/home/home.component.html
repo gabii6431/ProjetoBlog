@@ -15,7 +15,7 @@
             <mat-card-actions class="button">
               <button mat-raised-button color="primary" [routerLink]="['/comment', post.id]">Comments</button>
               <div class="button-end">
-                <button (click)="edit()" color="accent" mat-icon-button> 
+                <button color="accent" mat-icon-button [routerLink] = "['/edit-post', post.id]"> 
                   <mat-icon>edit</mat-icon>
                 </button>
                 <button (click)="deletePosts(post.id)" color="warn" mat-icon-button>

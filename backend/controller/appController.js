@@ -40,7 +40,7 @@ exports.read_a_post = function(req, res) {
 
 
 exports.update_a_post = function(req, res) {
-  Post.updateById(req.params.postId, new Post(req.body), function(err, post) {
+  Post.updateById(req.body.post_id, new Post(req.body), function(err, post) {
     if (err)
       res.send(err);
     res.json(post);

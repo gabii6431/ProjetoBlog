@@ -65,7 +65,15 @@ export class ApiService {
   deletePost (post): Observable<Post> {
     return this.http.delete<Post>(`http://localhost:3001/post/${post}`, httpOptions).pipe(
       tap(_ => console.log(`remove o post com post=${post}`)),
-      catchError(this.handleError<Post>('deleteProduto'))
+      catchError(this.handleError<Post>('deletePost'))
+    );
+  }
+
+  updatePost(id, post): Observable<any> {
+    console.log(this.http.put(`http://localhost:3001/post/${post}`, post, httpOptions))
+    return this.http.put(`http://localhost:3001/post/${post}`, post, httpOptions).pipe(
+      tap(_ => console.log(`atualiza o post com id=${id}`)),
+      catchError(this.handleError<any>('updateProduto'))
     );
   }
 
