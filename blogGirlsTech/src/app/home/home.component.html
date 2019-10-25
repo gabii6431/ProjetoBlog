@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
   <mat-grid-list cols="1" rowHeight="1:1">
-        <mat-card class="item-card" *ngFor="let post of dataSource">
+        <mat-card class="item-card" *ngFor="let post of dataSource| paginate: { itemsPerPage: 10, currentPage: p }">
             <mat-card-header>
               <mat-card-title>{{post.title}}</mat-card-title>
               <mat-card-subtitle> {{post.username}} em {{post.data | date: 'dd/MM/yyyy HH:mm:ss'}} </mat-card-subtitle>
@@ -26,5 +26,8 @@
             </mat-card-actions>
           </mat-card>
   </mat-grid-list>
-    
+  
+  </div>
+  <div class="formato">
+    <pagination-controls (pageChange)="p = $event" class="efeito"></pagination-controls>
   </div>

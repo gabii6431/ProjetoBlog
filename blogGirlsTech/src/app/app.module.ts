@@ -27,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NewCommentComponent } from './new-comment/new-comment.component';
-import { EditPostComponent } from './edit-post/edit-post.component'
+import { EditPostComponent } from './edit-post/edit-post.component';
+import {NgxPaginationModule} from 'ngx-pagination'
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { EditPostComponent } from './edit-post/edit-post.component'
     MatToolbarModule,
     HttpClientModule,
     LayoutModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxPaginationModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

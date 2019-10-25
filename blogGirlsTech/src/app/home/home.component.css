@@ -40,3 +40,20 @@
   .mat-flat-button {
     margin-left: 5px;
   }
+
+
+  .efeito {
+    display: inline-block;
+    margin-left: 40%;
+    border-radius: 50%;
+    background: #808080;
+    padding-right: 25px;
+  }
+ 
+
+  .ngx-pagination {
+    color: white;
+  }
+  .formato{
+    margin-bottom: 20px;
+  }
