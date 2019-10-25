@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.appService.setTitle('Página Principal');
     this._api.getPosts().subscribe(res => {
       this.dataSource = res;
+      this.dataSource = this.dataSource.reverse();
     }, err => {
       console.log(err);
     });
