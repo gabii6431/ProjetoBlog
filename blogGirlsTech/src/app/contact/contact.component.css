@@ -14,3 +14,9 @@ mat-form-field {
 mat-card-actions{
     margin-left: 50px;
 }
+
+.edit-link{
+    margin-bottom: 10px;
+    color:white;
+    text-decoration: none;
+}
